@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Null Safety · GitBook</title>
+        <title>If Expression · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="string_template.html" />
+    <link rel="next" href="when_expression.html" />
     
     
-    <link rel="prev" href="about_kotlin.html" />
+    <link rel="prev" href="string_template.html" />
     
 
     </head>
@@ -115,7 +115,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="null_safety.html">
+        <li class="chapter " data-level="1.3" data-path="null_safety.html">
             
                 <a href="null_safety.html">
             
@@ -141,7 +141,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="if_expression.html">
+        <li class="chapter active" data-level="1.5" data-path="if_expression.html">
             
                 <a href="if_expression.html">
             
@@ -256,7 +256,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Null Safety</a>
+        <a href=".." >If Expression</a>
     </h1>
 </div>
 
@@ -271,22 +271,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="null-safety">Null Safety</h1>
+                                <h1 id="if-expression">If Expression</h1>
 <ul>
-<li>In Kotlin, we need to explicitly specify that something is nullable</li>
+<li><code>expression</code> returns a value</li>
+<li>no need for ternary operations</li>
 </ul>
-<pre><code class="lang-kotlin"><span class="hljs-variable"><span class="hljs-keyword">var</span> thisVariableIsNullSafe</span>: String = <span class="hljs-string">&quot;Null safe&quot;</span>
-thisVariableIsNullSafe = <span class="hljs-literal">null</span> <span class="hljs-comment">//compilation error</span>
-
-println(<span class="hljs-string">&quot;String length i{thisVariableIsNullSafe.length}&quot;</span> <span class="hljs-comment">//ok</span>
-
-<span class="hljs-variable"><span class="hljs-keyword">var</span> thisVariableCanBeNull</span>: String? = <span class="hljs-string">&quot;This can be initialized to null&quot;</span>
-thisVariableCanBeNull = <span class="hljs-literal">null</span> <span class="hljs-comment">//ok</span>
-
-println(thisVariableCanBeNull.length) <span class="hljs-comment">// compilation error</span>
+<pre><code class="lang-kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> taskDone</span> = <span class="hljs-literal">true</span>
+<span class="hljs-variable"><span class="hljs-keyword">val</span> remarks</span> = <span class="hljs-keyword">if</span> (taskDone) <span class="hljs-string">&quot;Great!&quot;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;Keep it up!&quot;</span>
+println(remarks)
 </code></pre>
-<p>More information about null safety here:
-<a href="https://kotlinlang.org/docs/reference/null-safety.html" target="_blank">https://kotlinlang.org/docs/reference/null-safety.html</a></p>
+<p>More information about control flow here:
+<a href="https://kotlinlang.org/docs/reference/control-flow.html" target="_blank">https://kotlinlang.org/docs/reference/control-flow.html</a></p>
 
                                 
                                 </section>
@@ -314,12 +309,12 @@ println(thisVariableCanBeNull.length) <span class="hljs-comment">// compilation 
 
             
                 
-                <a href="about_kotlin.html" class="navigation navigation-prev " aria-label="Previous page: Hello, Kotlin">
+                <a href="string_template.html" class="navigation navigation-prev " aria-label="Previous page: String Template">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="string_template.html" class="navigation navigation-next " aria-label="Next page: String Template">
+                <a href="when_expression.html" class="navigation navigation-next " aria-label="Next page: When Epression">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -330,7 +325,7 @@ println(thisVariableCanBeNull.length) <span class="hljs-comment">// compilation 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Null Safety","level":"1.3","depth":1,"next":{"title":"String Template","level":"1.4","depth":1,"path":"kotlin/string_template.md","ref":"./kotlin/string_template.md","articles":[]},"previous":{"title":"Hello, Kotlin","level":"1.2","depth":1,"path":"kotlin/about_kotlin.md","ref":"./kotlin/about_kotlin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"kotlin/null_safety.md","mtime":"2018-05-19T01:07:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-19T01:05:00.025Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"If Expression","level":"1.5","depth":1,"next":{"title":"When Epression","level":"1.6","depth":1,"path":"kotlin/when_expression.md","ref":"./kotlin/when_expression.md","articles":[]},"previous":{"title":"String Template","level":"1.4","depth":1,"path":"kotlin/string_template.md","ref":"./kotlin/string_template.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"kotlin/if_expression.md","mtime":"2018-05-19T01:12:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-19T01:14:00.379Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -338,10 +333,6 @@ println(thisVariableCanBeNull.length) <span class="hljs-comment">// compilation 
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
