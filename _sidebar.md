@@ -73,6 +73,15 @@
   - Social App
   - Game App
 
+- Troubleshooting
+  - Configuring SDK
+  - Windows Firewall
+  - Mac Firewall
+  - System Settings
+  - Enabling Developer Mode
+  - Problems with HAXM/ if HAXM didn’t work
+  - Android Studio cannot detect my Android device
+
 - Developer Tools
   - [Octotree - Codetree for Github](https://github.com/buunguyen/octotree)
 
